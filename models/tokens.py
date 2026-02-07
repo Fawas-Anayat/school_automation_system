@@ -28,13 +28,6 @@ class Refresh_Token(Base):
     user_id : Mapped[int] = mapped_column(ForeignKey("User.user_id") , onupdate="CASCADE" , index=True)
     session_id : Mapped[int] = mapped_column(ForeignKey("UserSession.session_id") , onupdate="CASCADE" , index=True)
 
-    
+    is_active : Mapped[bool] = mapped_column(default=True , nullable=True)
+    is_revoked : Mapped[bool] = mapped_column(default=False , nullable=True)
 
-
-
-
-class Token(Base)
-
-    __tablename__ = "tokesn"
-
-    id : map
